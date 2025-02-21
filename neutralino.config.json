@@ -1,0 +1,45 @@
+{
+  "applicationId": "js.neutralino.zero",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "url": "/",
+  "enableServer": true,
+  "port": 0,
+  "tokenSecurity": "one-time",
+  "documentRoot": "/dist/",
+  "enableNativeAPI": true,
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "nativeAllowList": [
+    "app.*", "os.*", "debug.log"
+  ],
+  "globalVariables": {},
+  "modes": {
+    "window": {
+      "title": "myapp",
+      "width": 800,
+      "height": 500,
+      "enableInspector":true,
+      "minWidth": 400,
+      "minHeight": 200,
+      "icon": "/public/favicon.ico"
+    }
+  },
+  "cli": {
+    "binaryName": "myapp",
+    "resourcesPath": "/dist/",
+    "extensionsPath": "/extensions/",
+    "binaryVersion": "5.6.0",
+    "clientVersion": "5.6.0",
+    "frontendLibrary": {
+      "patchFile": "/index.html",
+      "devUrl": "http://localhost:3000",
+      "projectPath": "/",
+      "initCommand": "npm install",
+      "devCommand": "npm run dev",
+      "buildCommand": "npm run build:prod"
+    }
+  }
+}
