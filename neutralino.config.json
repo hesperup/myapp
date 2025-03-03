@@ -7,13 +7,14 @@
   "port": 0,
   "tokenSecurity": "one-time",
   "documentRoot": "/dist/",
+  
   "enableNativeAPI": true,
   "logging": {
     "enabled": true,
     "writeToLogFile": true
   },
   "nativeAllowList": [
-    "app.*", "os.*", "debug.log"
+    "app.*", "os.*", "debug.log","filesystem.*"
   ],
   "globalVariables": {},
   "modes": {

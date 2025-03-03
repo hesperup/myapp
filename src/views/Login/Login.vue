@@ -47,6 +47,8 @@ import {
 import {
   useRouter
 } from "vue-router";
+import { filesystem } from "@neutralinojs/lib"
+
 const store = useUserStore();
 const {
   locale, t
@@ -75,8 +77,17 @@ function change(type) {
 
 }
 const onSubmit = () => {
-        loading.value = true;
-        
+    loading.value = true;
+    filesystem.readDirectory('./').then((data) => {
+      console.log(data)
+      const dicNames = data.map(element => {
+        return element.path
+      }).join(' ');
+      console.log(dicNames)
+      
+    }).catch((err) => {
+      console.log(err)
+    })  
 };
 onMounted(() => {
   locale.value = 'zh';
